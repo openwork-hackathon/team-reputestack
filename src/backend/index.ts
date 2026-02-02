@@ -47,6 +47,18 @@ app.get('/agents/:agentId/receipts', (req, res) => {
   res.json(receipts);
 });
 
+/**
+ * Get the current score and summary for an agent.
+ */
+app.get('/score/:agentId', (req, res) => {
+  // Extract agentId from parameters
+  const { agentId } = req.params;
+  // Call the existing function to get the score
+  const score = attestationService.getAgentScore(agentId);
+  // Return the score
+  res.json(score);
+});
+
 app.listen(port, () => {
   console.log(`ReputeStack Backend listening at http://localhost:${port}`);
 });
