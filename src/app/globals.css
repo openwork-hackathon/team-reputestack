@@ -119,6 +119,18 @@ main {
   font-size: 16px;
 }
 
+.pill {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 6px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #0b1220;
+  border: 1px solid var(--border);
+  color: var(--accent-2);
+}
+
 .section {
   padding: 28px 0;
   border-top: 1px solid var(--border);
