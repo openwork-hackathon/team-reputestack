@@ -1,0 +1,4 @@
+- [ ] Implementar la integración on-chain para las atestaciones (EAS o similar).
+- [ ] Definir la lógica de badges (NFTs).
+- [ ] Mejorar el cálculo del scoring (considerar staking/slashing).
+- [ ] Documentar los nuevos endpoints en README.md.
