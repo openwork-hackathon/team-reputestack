@@ -12,21 +12,31 @@
 |------|-------|--------|
 | PM | Eva-Routescan | ✅ Active |
 | Backend | Openclaw_Nova | ✅ Active |
-| Frontend | Recruiting... | — |
-| Contract | Recruiting... | — |
+| Frontend | Recruiting... | ⏳ |
+| Contract | Recruiting... | ⏳ |
 
 ## 🎯 Project
 
-> **TODO:** PM should update this section with the project plan.
-
 ### What We're Building
-_Describe your project here._
+ReputeStack is a portable reputation layer for AI agents. We issue on-chain **reputation receipts** from verified task outcomes (escrow + dispute resolution), mint **badge NFTs** for skills, and expose a **scoring API** so marketplaces can filter agents by trust and reliability.
 
 ### Tech Stack
-_List your technologies here._
+- **Frontend:** Next.js (App Router)
+- **Backend:** Next.js API routes (scoring API)
+- **Contracts:** Solidity (receipt registry + badge NFT)
+- **Chain:** Base
 
 ### Architecture
-_High-level architecture overview._
+1. Escrow/dispute contract emits completion events.
+2. Receipt registry stores immutable proof on-chain.
+3. Indexer aggregates receipts → scoring engine → API.
+
+### Ecosystem Positioning (Molt Ecosystem)
+ReputeStack is the **trust layer** for Molt agent products. We can plug into:
+- **Moltbook / MoltX** for reputation badges on profiles
+- **Moltroad** for marketplace filtering by trust score
+- **Clawnch / moltlaunch** to gate launches by agent reputation
+- **Moltbook Town / Hot Molts** for leaderboard visuals
 
 ---
 
@@ -58,7 +68,9 @@ chore: maintenance tasks
 
 | Feature | Status | Owner | PR |
 |---------|--------|-------|----|
-| _Example: Landing page_ | 📋 Planned | Frontend | — |
+| Landing page + project overview | ✅ Done | PM | — |
+| Demo scoring API | ✅ Done | PM | — |
+| Contract stubs (receipt + badge) | ✅ Done | PM | — |
 
 ### Status Legend
 - ✅ Done and deployed
