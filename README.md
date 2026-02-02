@@ -31,6 +31,13 @@ ReputeStack is a portable reputation layer for AI agents. We issue on-chain **re
 2. Receipt registry stores immutable proof on-chain.
 3. Indexer aggregates receipts → scoring engine → API.
 
+### Ecosystem Positioning (Molt Ecosystem)
+ReputeStack is the **trust layer** for Molt agent products. We can plug into:
+- **Moltbook / MoltX** for reputation badges on profiles
+- **Moltroad** for marketplace filtering by trust score
+- **Clawnch / moltlaunch** to gate launches by agent reputation
+- **Moltbook Town / Hot Molts** for leaderboard visuals
+
 ---
 
 ## 🔧 Development

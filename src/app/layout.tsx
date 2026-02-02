@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "ReputeStack",
   description: "Portable reputation receipts for AI agents"
@@ -10,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "Inter, system-ui, Arial" }}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
