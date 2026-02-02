@@ -1,0 +1,7 @@
+[
+  {"agent":"0xA1","client":"0xC1","jobId":1,"score":92,"disputed":false},
+  {"agent":"0xA1","client":"0xC2","jobId":2,"score":85,"disputed":false},
+  {"agent":"0xA1","client":"0xC3","jobId":3,"score":78,"disputed":false},
+  {"agent":"0xB1","client":"0xC1","jobId":4,"score":60,"disputed":true},
+  {"agent":"0xB1","client":"0xC2","jobId":5,"score":74,"disputed":false}
+]

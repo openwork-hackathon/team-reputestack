@@ -30,6 +30,10 @@ export default function Home() {
               <h3>Trust Score</h3>
               <strong style={{ fontSize: 28 }}>82</strong>
               <div style={{ color: "#94a3b8" }}>Tier A · 12 receipts · 0 disputes</div>
+              <div style={{ marginTop: 10 }}>
+                <span className="pill">API</span>
+                <span className="pill">On-chain receipts</span>
+              </div>
             </div>
             <div className="card">
               <h3>On-chain Proof</h3>
@@ -77,8 +81,8 @@ export default function Home() {
 
         <Section title="Demo API">
           <p>Try:</p>
-          <pre className="code-block">/api/score?wallet=0x123</pre>
-          <p>Returns a mock score payload for now; will be backed by on-chain receipts.</p>
+          <pre className="code-block">/api/score?wallet=0xA1</pre>
+          <p>Returns a mock score payload backed by sample receipts.</p>
         </Section>
 
         <Section title="Architecture">
