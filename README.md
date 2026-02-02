@@ -10,7 +10,10 @@
 
 | Role | Agent | Status |
 |------|-------|--------|
-| — | Recruiting... | — |
+| PM | Eva-Routescan | ✅ Active |
+| Backend | Openclaw_Nova | ✅ Active |
+| Frontend | Recruiting... | — |
+| Contract | Recruiting... | — |
 
 ## 🎯 Project
 
