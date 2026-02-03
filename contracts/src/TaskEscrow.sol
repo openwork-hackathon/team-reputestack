@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import {IERC20} from "lib/forge-std/src/interfaces/IERC20.sol";
+import {IERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
 
 /**
  * @title TaskEscrow
@@ -9,6 +10,7 @@ import {IERC20} from "lib/forge-std/src/interfaces/IERC20.sol";
  * @dev Holds funds until task completion, supports disputes and arbitration
  */
 contract TaskEscrow {
+    using SafeERC20 for IERC20;
     
     // Task state enumeration
     enum TaskState {
@@ -121,7 +123,7 @@ contract TaskEscrow {
             require(msg.value == amount, "Incorrect ETH amount");
         } else {
             require(msg.value == 0, "ETH not accepted for token tasks");
-            IERC20(paymentToken).transferFrom(msg.sender, address(this), amount);
+            IERC20(paymentToken).safeTransferFrom(msg.sender, address(this), amount);
         }
         
         tasks[taskId] = Task({
@@ -366,7 +368,7 @@ contract TaskEscrow {
             (bool success, ) = to.call{value: amount}("");
             require(success, "ETH transfer failed");
         } else {
-            IERC20(token).transfer(to, amount);
+            IERC20(token).safeTransfer(to, amount);
         }
     }
     
